@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   front-envoy:
-    image: acremuglobal.azurecr.io/emulator_envoy:2.2
+    image: acremuglobal.azurecr.io/emulator_envoy:2.4
     container_name: emulator_envoy
     networks:
       - envoymesh
@@ -16,7 +16,7 @@ services:
     restart: unless-stopped
 
   emulator:
-    image: acremuglobal.azurecr.io/emulator_emulator:2.2
+    image: acremuglobal.azurecr.io/emulator_emulator:2.4
     container_name: emulator_emulator
     networks:
       envoymesh:
@@ -29,7 +29,7 @@ services:
     restart: unless-stopped
 
   jwt_signer:
-    image: acremuglobal.azurecr.io/emulator_jwt_signer:2.2
+    image: acremuglobal.azurecr.io/emulator_jwt_signer:2.4
     container_name: emulator_jwt_signer
     networks:
       envoymesh:
@@ -40,7 +40,7 @@ services:
     restart: unless-stopped
 
   nginx:
-    image: acremuglobal.azurecr.io/emulator_nginx:2.2
+    image: acremuglobal.azurecr.io/emulator_nginx:2.4
     container_name: emulator_nginx
     networks:
       envoymesh:
